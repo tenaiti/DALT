@@ -1,0 +1,7 @@
+﻿  DALT.cpp
+C:\Users\ADMIN\Desktop\DALT\DALT\movie.h(91,1): error C2039: 'menu': is not a member of 'MovieController::<unnamed-type-views>'
+C:\Users\ADMIN\Desktop\DALT\DALT\movie.h(28): message : see declaration of 'MovieController::<unnamed-type-views>'
+  movie.cpp
+C:\Users\ADMIN\Desktop\DALT\DALT\movie.h(91,1): error C2039: 'menu': is not a member of 'MovieController::<unnamed-type-views>'
+C:\Users\ADMIN\Desktop\DALT\DALT\movie.h(28): message : see declaration of 'MovieController::<unnamed-type-views>'
+  Generating Code...
