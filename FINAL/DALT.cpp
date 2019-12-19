@@ -20,6 +20,7 @@ public:
 	class {
 	public:
 		int menu() {
+			system("cls");
 			cout<< "+-------------------------------------------------+" <<endl
 				<< "|            NHOM DALT_02 - 18TCLDT3-18N15        |" << endl
 				<< "| THANH VIEN NHOM: NGUYEN KIM HUY                 |" << endl
@@ -50,17 +51,28 @@ public:
 		{	
 		case 1:
 			movies.menuMovie();
+			this->render();
 			break;
 		case 2:
 			rooms.menuRoom();
+			this->render();
+			break;
 		case 3:
 			tickets.menuTicket();
+			this->render();
+			break;
 		case 4:
 			shifts.menuShift();
+			this->render();
+			break;
 		case 5:
 			times.menuTimes();
+			this->render();
+			break;
 		case 6:
 			revenues.menuRevenue();
+			this->render();
+			break;
 		case 7:
 			break;
 		default:

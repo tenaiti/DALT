@@ -46,10 +46,10 @@ class MovieController{
 			return n;
 		}
 		void movieShow(List<Movie>& movies) {
-			cout << "========== MOVIE SHOW ==========" << endl;
-			cout << endl
-				<< "MOVIE SHOW" << endl
-				<< setw(10) << "MOVIE ID" << setw(35) << "MOVIE NAME" << setw(20) << "MOVIE CATEGORY" << setw(35) << "MOVIE PRODUCER" << setw(15) << "MOVIE TIME" << endl;
+			cout << "=================================================== MOVIE SHOW ======================================================" << endl;
+			//cout << endl
+			//	<< "MOVIE SHOW" << endl
+				cout<< setw(10) << "MOVIE ID" << setw(35) << "MOVIE NAME" << setw(20) << "MOVIE CATEGORY" << setw(35) << "MOVIE PRODUCER" << setw(15) << "MOVIE TIME" << endl;
 			for (int i = 0; i < movies.length; i++)
 			{
 				cout << movies[i];
@@ -57,13 +57,13 @@ class MovieController{
 			system("pause");
 		}
 		Movie movieAdd() {
-			cout << "========== MOVIE ADD" << endl;
+			cout << "========== MOVIE ADD =========" << endl;
 			Movie newMovie;
 			cin >> newMovie;
 			return newMovie;
 		}
 		int movieRemove(List<Movie>& movies) {
-			cout << "========== MOVIE REMOVE" << endl;
+			cout << "========== MOVIE REMOVE =========" << endl;
 			movieShow(movies);
 			int movieId;
 			cout << endl
@@ -78,7 +78,8 @@ class MovieController{
 		switch (views.movie()) {
 		case 1:
 			showMovie();
-			this->menuMovie();
+			menuMovie();
+			break;
 		case 2:
 			addMovie();
 			menuMovie();
@@ -89,8 +90,10 @@ class MovieController{
 			break;
 		case 4:
 			break;
+		case 5:
+			exit(1);
 		default:
-			this->menuMovie();
+			break;
 		};
 	};
 	void showMovie() {
@@ -109,13 +112,14 @@ class MovieController{
 	void removeMovie() {
 		
 		//models.getAllMovie(movies);
-		int _movieId;  
+		/*int _movieId;  
 		_movieId = views.movieRemove(movies);
 		for (int t = 0; t < movies.length; t++) {
 			if (_movieId == movies[t].movieId) {
 				movies.deletePosition(t);
 			}
-		}
+		}*/
+		movies.deletePosition(1);
 		views.movieShow(movies);
 		//models.movieRemove(_movieId);
 		menuMovie();
